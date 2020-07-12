@@ -34,28 +34,28 @@ class _bottomtabsState extends State<BottomTabs> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home,),
-              title: Text("Home",),
-              backgroundColor: Colors.lightGreenAccent[700]
+              title: Text("Home",style: TextStyle(fontSize: 13),),
+              backgroundColor: Colors.indigo
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard,),
-              title: Text("Offers",),
-              backgroundColor: Colors.lightGreenAccent[700]
+              title: Text("Offers",style: TextStyle(fontSize: 13)),
+              backgroundColor: Colors.indigo
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.toc,),
-            title: Text("My Booking"),
-            backgroundColor: Colors.lightGreenAccent[700],
+            icon: Icon(Icons.format_list_bulleted,),
+            title: Text("My Booking",style: TextStyle(fontSize: 13)),
+            backgroundColor: Colors.indigo,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat,),
-            title: Text("My Chat"),
-            backgroundColor: Colors.lightGreenAccent[700],
+            title: Text("My Chat",style: TextStyle(fontSize: 13)),
+            backgroundColor: Colors.indigo,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle,),
-            title: Text("My Account"),
-            backgroundColor: Colors.lightGreenAccent[700],
+            title: Text("My Account",style: TextStyle(fontSize: 13)),
+            backgroundColor: Colors.indigo,
           ),
         ],
       ),

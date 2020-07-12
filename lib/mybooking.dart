@@ -20,7 +20,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
 
     return Scaffold(backgroundColor: Colors.grey[200],
-      appBar: AppBar(backgroundColor: Colors.lightGreenAccent[700],
+      appBar: AppBar(backgroundColor: Colors.indigo,
         title: Text('My Bookings',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
       ),
       body: Padding(
@@ -34,7 +34,7 @@ class _MyBookingState extends State<MyBooking> with SingleTickerProviderStateMix
                 controller: _tabController,
                   indicator: BoxDecoration(
                       borderRadius:BorderRadius.circular(34),
-                  color: Colors.lightGreenAccent[700],
+                  color: Colors.indigo,
                   border: Border.all(color: Colors.black)),
                 tabs: <Widget>[
                   Tab(child: Container(

@@ -8,6 +8,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
    DateTime _currentdate = new DateTime.now();
+   final tmrw = DateTime.now().add(Duration(days: 1));
+
+        _tmrDate(){
+          setState(() {
+            _currentdate = tmrw;
+          });
+   }
 
    Future<Null> _selectDate(BuildContext context)async{
      final DateTime picked = await showDatePicker(
@@ -29,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          backgroundColor: Colors.lightGreenAccent[700],
+          backgroundColor: Colors.indigo,
           title: Text('Bus Tickets',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
         ),
@@ -113,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-                          ),
+                          ),SizedBox(width: 40,),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 1),
                             child: Row(mainAxisAlignment: MainAxisAlignment.end,
@@ -123,34 +130,19 @@ class _HomePageState extends State<HomePage> {
                                   child: FlatButton(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(18.0),
-                                      side: BorderSide(color: Colors
-                                          .black),),
-                                    onPressed: () {},
+                                      side: BorderSide(
+                                          color: Colors
+                                          .indigo),),
+                                    onPressed: () {_tmrDate();} ,
                                     //color: Colors.lightGreenAccent[700],
                                     textColor: Colors.white,
-                                    child: Text('TODAY', style: TextStyle(
-                                        fontSize: 11,
+                                    child: Text('TOMORROW', style: TextStyle(
+                                        fontSize: 12,
                                         color: Colors.indigo,
                                         fontWeight: FontWeight.bold),),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: FlatButton(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(18.0),
-                                      side: BorderSide(
-                                          color: Colors
-                                          .black),),
-                                    onPressed: () {} ,
-                                    //color: Colors.lightGreenAccent[700],
-                                    textColor: Colors.white,
-                                    child: Text('TOMORROW', style: TextStyle(
-                                        fontSize: 11,
-                                        color: Colors.indigo,
-                                        fontWeight: FontWeight.bold),),
-                                  ),
-                                )
+
                               ],
                             ),
 
@@ -168,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                     width:MediaQuery.of(context).size.width/1,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.lightGreenAccent[700],
+                      color: Colors.indigo,
                     ),
                     child: Center(child: Text('SEARCH',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),textAlign: TextAlign.center,)),
                   ),

@@ -10,7 +10,7 @@ class _MyOfferState extends State<MyOffer> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent[700],
+        backgroundColor: Colors.indigo,
         title: Text('Offers',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
       ),
@@ -74,19 +74,19 @@ class _MyOfferState extends State<MyOffer> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('App users save up to Rs-400',style: TextStyle(color: Colors.lightGreenAccent[700],fontSize: 17),),
+                          child: Text('App users save up to Rs-400',style: TextStyle(color: Colors.indigo,fontSize: 20),),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('App users - Up to Rs-400 off',style: TextStyle(color: Colors.black54,fontSize: 13),),
+                          child: Text('App users - Up to Rs-400 off',style: TextStyle(color: Colors.black54,fontSize: 15),),
                         ),
                         SizedBox(height: 5,),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
                           child: Container(
-                            width: MediaQuery.of(context).size.width/6,
+                            width: MediaQuery.of(context).size.width/2,
                             height: MediaQuery.of(context).size.height/145,
-                            color: Colors.lightGreenAccent[700],
+                            color: Colors.indigo,
                           ),
                         ),
                         Padding(
@@ -104,7 +104,7 @@ class _MyOfferState extends State<MyOffer> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('More Detils',style: TextStyle(color: Colors.lightGreenAccent[700]),),
+                          child: Text('More Detils',style: TextStyle(color: Colors.indigo),),
                         ),
 
 
@@ -132,11 +132,11 @@ class _MyOfferState extends State<MyOffer> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('Privilage Member Benefits',style: TextStyle(color: Colors.lightGreenAccent[700],fontSize: 17),),
+                          child: Text('Privilage Member Benefits',style: TextStyle(color: Colors.indigo,fontSize: 20),),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('UpTo 5% off',style: TextStyle(color: Colors.black54,fontSize: 13),),
+                          child: Text('UpTo 5% off',style: TextStyle(color: Colors.black54,fontSize: 15),),
                         ),
                         SizedBox(height: 5,),
                         Padding(
@@ -144,7 +144,7 @@ class _MyOfferState extends State<MyOffer> {
                           child: Container(
                             width: MediaQuery.of(context).size.width/6,
                             height: MediaQuery.of(context).size.height/145,
-                            color: Colors.lightGreenAccent[700],
+                            color: Colors.indigo,
                           ),
                         ),
                         Padding(
@@ -162,7 +162,7 @@ class _MyOfferState extends State<MyOffer> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('More Detils',style: TextStyle(color: Colors.lightGreenAccent[700]),),
+                          child: Text('More Detils',style: TextStyle(color: Colors.indigo),),
                         ),
 
 
@@ -190,24 +190,24 @@ class _MyOfferState extends State<MyOffer> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('Vis offer for booking above/n Rs 1000',style: TextStyle(color: Colors.lightGreenAccent[700],fontSize: 17),),
+                          child: Text('Visa offer on orders above Rs 500',style: TextStyle(color: Colors.indigo,fontSize: 20),),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('App users - Up to Rs-400 off',style: TextStyle(color: Colors.black54,fontSize: 13),),
+                          child: Text('Earn Rs50 cashback',style: TextStyle(color: Colors.black54,fontSize: 15),),
                         ),
                         SizedBox(height: 5,),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
                           child: Container(
-                            width: MediaQuery.of(context).size.width/6,
+                            width: MediaQuery.of(context).size.width/5,
                             height: MediaQuery.of(context).size.height/145,
-                            color: Colors.lightGreenAccent[700],
+                            color: Colors.indigo,
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('- Additional cashbacks on wallets\n- Login to apply | First time App users',style: TextStyle(color: Colors.black54),),
+                          child: Text('- Flt 5% off + Rs50 cashback + Rs25 redemption\n- Valid till 30th Sep 2020',style: TextStyle(color: Colors.black54),),
                         ),
                         SizedBox(height: 15,),
                         Padding(
@@ -220,7 +220,7 @@ class _MyOfferState extends State<MyOffer> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('More Detils',style: TextStyle(color: Colors.lightGreenAccent[700]),),
+                          child: Text('More Detils',style: TextStyle(color: Colors.indigo),),
                         ),
 
 
@@ -247,24 +247,24 @@ class _MyOfferState extends State<MyOffer> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('App users save up to Rs-400',style: TextStyle(color: Colors.lightGreenAccent[700],fontSize: 17),),
+                          child: Text('Visa offer on orders above Rs 1000',style: TextStyle(color: Colors.indigo,fontSize: 20),),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('App users - Up to Rs-400 off',style: TextStyle(color: Colors.black54,fontSize: 13),),
+                          child: Text('Earn Rs1000 cashback',style: TextStyle(color: Colors.black54,fontSize: 15),),
                         ),
                         SizedBox(height: 5,),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
                           child: Container(
-                            width: MediaQuery.of(context).size.width/6,
+                            width: MediaQuery.of(context).size.width/4,
                             height: MediaQuery.of(context).size.height/145,
-                            color: Colors.lightGreenAccent[700],
+                            color: Colors.indigo,
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('- Additional cashbacks on wallets\n- Login to apply | First time App users',style: TextStyle(color: Colors.black54),),
+                          child: Text('- Applicable on selected Visa cards only\n- Valid till 30th Sep 2020',style: TextStyle(color: Colors.black54),),
                         ),
                         SizedBox(height: 15,),
                         Padding(
@@ -277,18 +277,16 @@ class _MyOfferState extends State<MyOffer> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 4,horizontal:9),
-                          child: Text('More Detils',style: TextStyle(color: Colors.lightGreenAccent[700]),),
+                          child: Text('More Detils',style: TextStyle(color: Colors.indigo),),
                         ),
-
-
                       ],
-
                     ),
                   ),
-
                 ),
               ),
+
             )
+
           ],
         ),
       )

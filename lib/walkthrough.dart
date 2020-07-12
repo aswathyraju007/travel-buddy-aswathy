@@ -32,7 +32,7 @@ class _WalkthroghState extends State<Walkthrogh> {
       height: 5.0,
       width: isActive ? 20.0 : 16.0,
       decoration: BoxDecoration(
-        color: isActive ? Colors.lightBlue : Colors.white,
+        color: isActive ? Colors.indigo : Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(22)),
       ),);
   }
@@ -207,9 +207,9 @@ class _WalkthroghState extends State<Walkthrogh> {
       bottomSheet: currentpage == numpage -1 ? Container(
         height: 50,
         width: double.infinity,
-        color: Colors.lightBlue,
+        color: Colors.indigo,
         child: GestureDetector(
-          onTap: () {     Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomTabs() ),);},
+          onTap: () {     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BottomTabs() ),);},
           child: Center(
             child: Padding(padding: EdgeInsets.only(bottom: 08.0),
               child: Text("Get Started",style: TextStyle(color: Colors.white,fontSize: 19.0,fontWeight: FontWeight.bold),),),

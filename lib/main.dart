@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
      title: 'Travel Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green
+        primarySwatch: Colors.indigo,primaryColor: Colors.indigo
       ),
+
      home: SplashScreen(),
     );
   }

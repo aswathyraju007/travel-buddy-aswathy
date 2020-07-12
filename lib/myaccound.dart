@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travelflutter_app/signupcheckpage.dart';
 import 'homepage.dart';
 import 'cancelbooking.dart';
 class MyAccount extends StatefulWidget {
@@ -12,16 +13,17 @@ class _MyAccountState extends State<MyAccount> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-//      appBar: AppBar(
-//        backgroundColor: Colors.lightGreenAccent[700],
-//        title: Text('My Account',
-//          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-//      ),
-    body: SingleChildScrollView(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.indigo,
+        title: Text('My Account',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+      ),
+    body: SingleChildScrollView(scrollDirection: Axis.vertical,
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,22,0,0),
+            padding: const EdgeInsets.fromLTRB(0,0,0,0),
             child: Container(
               color: Colors.indigo,
               height: MediaQuery.of(context).size.height/6,
@@ -35,10 +37,14 @@ class _MyAccountState extends State<MyAccount> {
                   child: ClipOval(child:Image.asset("images/myaccount.jpg"),
                   ),
                 ),
-                SizedBox(width: 20,),
-                Text('LOGIN /',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
-                SizedBox(width: 5.0,),
-                Text('SIGNUP',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
+               GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => LoginSignupPage()));},
+                   child: Row(
+                     children: <Widget>[
+                       Text('LOGIN/',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                       SizedBox(width: 5.0,),
+                       Text('SIGNUP',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                     ],
+                   ))
               ],
               ),
             ),
@@ -105,14 +111,7 @@ class _MyAccountState extends State<MyAccount> {
                     Navigator.push(context,MaterialPageRoute(builder: (context) =>HomePage()));
                   },
                 ),
-                ListTile(
-                  leading: Icon(Icons.person_outline),
-                  title: Text('Logout',style: TextStyle(color:Colors.black),),
-                  trailing: Icon(Icons.arrow_forward),
-                  onTap: (){
-                    Navigator.push(context,MaterialPageRoute(builder: (context) =>HomePage()));
-                  },
-                ),
+
               ],
             ),
             ),

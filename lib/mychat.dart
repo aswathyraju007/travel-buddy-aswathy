@@ -7,6 +7,10 @@ class MyChat extends StatefulWidget {
 class _MyChatState extends State<MyChat> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Chat'),
+      ),
+    );
   }
 }
