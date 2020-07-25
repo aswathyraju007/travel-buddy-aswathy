@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'bottomtabs.dart';
 import 'package:travelflutter_app/homepage.dart';
 
@@ -220,3 +221,137 @@ class _WalkthroghState extends State<Walkthrogh> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+class Edit extends StatefulWidget {
+  @override
+  _EditState createState() => _EditState();
+}
+
+class _EditState extends State<Edit> {
+  DateTime _currentdate = new DateTime.now();
+  final tmrw = DateTime.now().add(Duration(days: 1));
+
+  _tmrDate(){
+    setState(() {
+      _currentdate = tmrw;
+    });
+  }
+
+  Future<Null> _selectDate(BuildContext context)async{
+    final DateTime picked = await showDatePicker(
+      context: context,
+      initialDate: _currentdate,
+      firstDate:DateTime(2000),
+      lastDate:DateTime (2022),
+    );
+    if(picked != null){
+      setState(() {
+        _currentdate = picked;
+      });
+    }
+
+  }
+  @override
+  Widget build(BuildContext context) {
+    String _formattedate = new DateFormat.yMMMd().format(_currentdate);
+    return Scaffold(
+
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 400,
+            width: 600,
+            decoration:BoxDecoration(
+                shape:BoxShape.rectangle,
+                borderRadius:BorderRadius.only(
+                  topLeft:Radius.circular(25.0),
+                  topRight: Radius.circular(25.0),
+                )
+            ),
+            child: Column(
+              children: [
+                Text('Edit Invoice NO.&Date',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                SizedBox(height: 10,),
+                Divider(thickness: 2),
+                Text("Invoice Number",style: TextStyle(fontSize: 12,color: Colors.black54),),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        isDense: true,
+                        contentPadding: EdgeInsets.all(9),
+
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                          borderSide: BorderSide(color: Colors.grey),
+
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                          borderSide: BorderSide(color: Colors.grey),
+                        )
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10,),
+                Row(
+                  children: [
+                    Icon(Icons.add_circle_outline,color: Colors.indigo,size: 18,),
+                    SizedBox(width: 5,),
+                    Text("Add Prefix",style: TextStyle(fontSize: 10,color: Colors.indigo),),
+                  ],
+                ),
+                SizedBox(height: 20,),
+                Text("Invoice Date",style: TextStyle(fontSize: 12,color: Colors.black54),),
+                OutlineButton(
+                  onPressed: () {},
+                  color: Colors.teal,
+                  borderSide: BorderSide(color: Colors.grey),
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(8.0)),
+                  child:  GestureDetector(
+                    onTap: () =>_selectDate(context),
+                    child: Row(
+                      children: [
+                        Text(
+                          '$_formattedate', style: TextStyle(fontSize: 12),),
+                        SizedBox(width: 25,),
+                        Icon(Icons.calendar_today, size: 20,),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(width: 20,),
+                Container(
+                    height: 50,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10), color: Colors.indigo),
+                    child: Center(child: Text("SET",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),))
+                ),
+              ],
+
+            ),
+
+
+
+          ),
+        ),
+      ),
+    );
+  }
+}
+
